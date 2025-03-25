@@ -55,13 +55,19 @@ class PokemonViewModel(application: Application) : AndroidViewModel(application)
     private val _selectedType = MutableStateFlow("")
     val selectedType: StateFlow<String> = _selectedType
 
+    private val _pagedFavorites = MutableStateFlow<List<PokemonEntity>>(emptyList())
+    val pagedFavorites: StateFlow<List<PokemonEntity>> = _pagedFavorites
+
+    private val _favoriteUiState = MutableStateFlow(PaginationState())
+    val favoriteUiState: StateFlow<PaginationState> = _favoriteUiState.asStateFlow()
+
     private val pageSize = 8
 
-    val db = Room.databaseBuilder(
+    private val db = Room.databaseBuilder(
         application.applicationContext,
         AppDatabase::class.java, "pokemon-database"
     ).build()
-    val pokemonDao = db.pokemonDao()
+    private val pokemonDao = db.pokemonDao()
 
     private val api = Retrofit.Builder()
         .baseUrl(BASE_URL)
