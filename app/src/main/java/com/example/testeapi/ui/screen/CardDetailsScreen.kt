@@ -137,7 +137,7 @@ fun CardDetailsScreen(pokemonName: String, viewModel: PokemonViewModel = viewMod
 
                                 Box(
                                     modifier = Modifier
-                                        .width(90.dp)
+                                        .width(100.dp)
                                         .clip(RoundedCornerShape(8.dp))
                                         .background(color = borderColorByType(pokemonDetails!!.types[0].type.name)),
                                     contentAlignment = Alignment.Center
@@ -156,7 +156,7 @@ fun CardDetailsScreen(pokemonName: String, viewModel: PokemonViewModel = viewMod
                                 pokemonDetails!!.types.getOrNull(1)?.let { type ->
                                     Box(
                                         modifier = Modifier
-                                            .width(90.dp)
+                                            .width(100.dp)
                                             .clip(RoundedCornerShape(8.dp))
                                             .background(color = borderColorByType(type.type.name)),
                                         contentAlignment = Alignment.Center

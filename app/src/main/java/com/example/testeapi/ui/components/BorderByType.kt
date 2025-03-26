@@ -23,6 +23,7 @@ fun borderColorByType(type: String): Color{
         "poison" -> Color(0xFFB667CF)
         "ghost" -> Color(0xFF5269AD)
         "flying" -> Color(0XFF89AAE3)
+        "steel" -> Color(0XFF5A8EA2)
         else -> Color.LightGray
     }
 }
