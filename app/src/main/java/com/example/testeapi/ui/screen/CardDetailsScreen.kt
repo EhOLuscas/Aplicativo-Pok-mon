@@ -75,7 +75,7 @@ fun CardDetailsScreen(pokemonName: String, viewModel: PokemonViewModel = viewMod
             ) {
                 Card(
                     modifier = Modifier
-                        .size(width = 600.dp, height = 350.dp)
+                        .size(width = 650.dp, height = 350.dp)
                         .border(
                             width = 10.dp,
                             color = borderColorByType(pokemonDetails!!.types[0].type.name),
