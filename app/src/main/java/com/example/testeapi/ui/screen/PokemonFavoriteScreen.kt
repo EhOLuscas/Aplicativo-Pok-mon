@@ -44,11 +44,8 @@ fun PokemonFavoriteScreen(
     navController: NavController,
     viewModel: PokemonViewModel = viewModel()
 ) {
-    val query by viewModel.query.collectAsState()
-    val types by viewModel.types.collectAsState()
-    var selectedType by remember { mutableStateOf("") }
     val favorites by viewModel.getFavorites().collectAsState(emptyList())
-    val uiState by viewModel.uiState.collectAsState()
+
     val pageSize = 8
     var currentFavoritePage by remember { mutableIntStateOf(0) }
 
